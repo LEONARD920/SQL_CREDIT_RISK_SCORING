@@ -5,7 +5,7 @@ SELECT
     loan_amnt,
     loan_status, -- 1 = Default, 0 = Non-Default
     
-    -- Segmentazione Età
+    -- Age Segmentation
     CASE 
         WHEN person_age BETWEEN 18 AND 25 THEN '1. Gen Z (18-25)'
         WHEN person_age BETWEEN 26 AND 35 THEN '2. Millennials (26-35)'
@@ -13,19 +13,18 @@ SELECT
         ELSE '4. Boomers (50+)' 
     END AS age_bracket,
 
-    -- Rapporto Rata/Reddito (Debt-to-Income / Loan-to-Income)
-    -- Cruciale per un Credit Risk Analyst
+    -- Debt-to-Income Ratio (DTI)
     CASE 
-        WHEN loan_percent_income <= 0.10 THEN 'Basso Rischio (<=10%)'
-        WHEN loan_percent_income > 0.10 AND loan_percent_income <= 0.25 THEN 'Medio Rischio (11-25%)'
-        WHEN loan_percent_income > 0.25 AND loan_percent_income <= 0.40 THEN 'Alto Rischio (26-40%)'
-        ELSE 'Critico (>40%)'
-    END come dti_category,
+        WHEN loan_percent_income <= 0.10 THEN 'Low Risk (<=10%)'
+        WHEN loan_percent_income > 0.10 AND loan_percent_income <= 0.25 THEN 'Medium Risk (11-25%)'
+        WHEN loan_percent_income > 0.25 AND loan_percent_income <= 0.40 THEN 'High Risk (26-40%)'
+        ELSE 'Critical (>40%)'
+    END AS dti_category,
 
-    -- Storico creditizio
+    -- Credit History Flag
     CASE 
         WHEN cb_person_default_on_file = 'Y' THEN 1 
         ELSE 0 
-    END AS storic_default_flag
+    END AS historic_default_flag
 
 FROM vw_credit_risk_cleaned;
