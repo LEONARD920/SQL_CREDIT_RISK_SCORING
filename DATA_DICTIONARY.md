@@ -1,7 +1,7 @@
-# DATASET_NAME: CREDIT_RISK_DATASET
-# DATASET_SOURCE: https://www.kaggle.com/datasets/laotse/credit-risk-dataset/data
+## DATASET_NAME: CREDIT_RISK_DATASET
+## DATASET_SOURCE: https://www.kaggle.com/datasets/laotse/credit-risk-dataset/data
 
-# DATASET_VARIABLES:
+## DATASET_VARIABLES:
 
   person_age: Age
   person_income: Annual Income
