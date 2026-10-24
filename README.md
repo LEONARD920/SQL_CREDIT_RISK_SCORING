@@ -12,11 +12,11 @@ This project utilizes PostgreSQL to analyze a retail loan portfolio and develop 
 
 ## 🎯 **Objectives**
 
-- Data Quality: Identify and handle anomalies and extreme outliers in the demographic and income data of applicants to ensure analysis reliability.
+**- Data Quality**: Identify and handle anomalies and extreme outliers in the demographic and income data of applicants to ensure analysis reliability.
 
-- Risk Segmentation: Group applicants into income deciles and risk brackets based on the Debt-to-Income (DTI) ratio to historically calculate the Probability of   Default (PD).
+**- Risk Segmentation**: Group applicants into income deciles and risk brackets based on the Debt-to-Income (DTI) ratio to historically calculate the Probability of   Default (PD).
 
-- Decision Engine: Build an end-to-end Credit Scoring system via SQL to classify applications into clusters (from Prime to Reject/High Risk), optimizing automated approvals versus manual review.
+**- Decision Engine**: Build an end-to-end Credit Scoring system via SQL to classify applications into clusters (from Prime to Reject/High Risk), optimizing automated approvals versus manual review.
 
 
 
