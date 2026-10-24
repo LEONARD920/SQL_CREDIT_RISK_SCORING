@@ -3,27 +3,27 @@
 
 ## DATASET_VARIABLES:
 
-- person_age: Age
+- **Person_age**: Age
   
-- person_income: Annual Income
+- **Person_income**: Annual Income
   
-- person_home_ownership: Home ownership
+- **Person_home_ownership**: Home ownership
   
-- person_emp_length:	Employment length (in years)
+- **Person_emp_length**:	Employment length (in years)
   
-- loan_intent:	Loan intent
+- **Loan_intent**:	Loan intent
   
-- loan_grade:	Loan grade
+- **Loan_grade**:	Loan grade
   
-- loan_amnt:	Loan amount
+- **Loan_amnt**:	Loan amount
   
-- loan_int_rate:	Interest rate
+- **Loan_int_rate**:	Interest rate
   
-- loan_status:	Loan status (0 is non default 1 is default)
+- **Loan_status**:	Loan status (0 is non default 1 is default)
   
-- loan_percent_income:	Percent income
+- **Loan_percent_income**:	Percent income
   
-- cb_person_default_on_file:	Historical default
+- **Cb_person_default_on_file**:	Historical default
   
 - cb_preson_cred_hist_length:	Credit history length
   
