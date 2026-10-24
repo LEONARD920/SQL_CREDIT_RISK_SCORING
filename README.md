@@ -1,15 +1,16 @@
 # SQL_CREDIT_RISK_SCORING
+
 End-to-end SQL project demonstrating credit risk classification, feature engineering, and a scorecard decision model using PostgreSQL
 
 
-📌 Project Overview
+## 📌 **Project Overview**
 
 This project utilizes PostgreSQL to analyze a retail loan portfolio and develop a heuristic credit risk classification model. Based on a synthetic dataset of financial profiles, the project aims to demonstrate the application of advanced SQL logic for data cleaning, feature engineering, and the creation of decision rules (Scorecard) directly applicable within a Risk Management department.
 
 
 
 
-🎯 Objectives
+## 🎯 **Objectives**
 
 - Data Quality: Identify and handle anomalies and extreme outliers in the demographic and income data of applicants to ensure analysis reliability.
 
@@ -20,7 +21,8 @@ This project utilizes PostgreSQL to analyze a retail loan portfolio and develop 
 
 
 
-📂 Analytical Pipeline Structure
+## 📂 **Analytical Pipeline Structure**
+
 The project is divided into 4 sequential scripts:
 
 01_data_cleaning.sql: Data Preparation phase. Handling null values (e.g., missing interest rates imputed via global averages) and logically removing extreme outliers (e.g., age or employment length anomalies) using VIEWs.
@@ -34,7 +36,7 @@ The project is divided into 4 sequential scripts:
 
 
 
-📊 Calculated Metrics & KPIs
+## 📊 **Calculated Metrics & KPIs**
 
 DTI (Debt-to-Income Ratio)
 
@@ -45,7 +47,7 @@ Total Risk Score (additive penalty model for rating)
 
 
 
-🛠️ Tech Stack & Skills
+## 🛠️ **Tech Stack & Skills**
 
 Database: PostgreSQL 15+
 
