@@ -1,5 +1,8 @@
 ## DATASET_NAME: CREDIT_RISK_DATASET
+
+
 ## DATASET_SOURCE: https://www.kaggle.com/datasets/laotse/credit-risk-dataset/data
+
 
 ## DATASET_VARIABLES:
 
@@ -25,5 +28,5 @@
   
 - **Cb_person_default_on_file**:	Historical default
   
-- cb_preson_cred_hist_length:	Credit history length
+- **Cb_preson_cred_hist_length**:	Credit history length
   
