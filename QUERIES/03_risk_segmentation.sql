@@ -3,7 +3,7 @@ WITH IncomeDeciles AS (
     SELECT 
         person_income,
         loan_status,
-        -- Divide la popolazione in 10 fasce di reddito (Decili)
+        -- Divides the population into 10 income brackets (Deciles)
         NTILE(10) OVER (ORDER BY person_income ASC) AS income_decile
     FROM vw_credit_risk_cleaned
 )
@@ -13,7 +13,7 @@ SELECT
     MAX(person_income) AS max_income,
     COUNT(*) AS total_loans,
     SUM(loan_status) AS total_defaults,
-    -- Calcolo del tasso di insolvenza
+    -- Calculation of the default rate
     ROUND(SUM(loan_status) * 100.0 / COUNT(*), 2) AS default_rate_pct
 FROM 
     IncomeDeciles
