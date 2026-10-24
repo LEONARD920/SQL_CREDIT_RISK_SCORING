@@ -47,18 +47,19 @@ Total Risk Score (additive penalty model for rating)
 
 
 
-## 🛠️ **Tech Stack & Skills**
+## 💡 Key Findings & Business Insights
 
-Database: PostgreSQL 15+
+**- Historical Behavior is the Strongest Predictor:**
+The scorecard model heavily penalizes applicants with a prior history of default (+40 points). The model operates on the principle that past financial behavior is the most reliable indicator of future creditworthiness, immediately pushing these applicants out of the "Prime" (Class A) tier regardless of current income.
 
-Applied SQL Techniques:
+**- Debt-to-Income (DTI) Determines Repayment Capacity:**
+By categorizing loan_percent_income, the analysis highlights that DTI is a critical threshold. Applicants crossing the 20% and 35% thresholds receive progressive penalties. This insight allows the bank to establish strict lending guardrails, as applicants with high DTI simply lack the liquidity to absorb financial shocks.
 
-Window Functions (NTILE, partitioned aggregations)
+**- Loan Intent & Asset Stability act as Risk Multipliers:**
+The model reveals that not all loans are equal. High-stress or speculative loan intents (Medical, Venture, Debt Consolidation) carry inherent risks, as does a lack of asset stability (Renting vs. Owning). These variables act as risk multipliers that can downgrade a borderline applicant into a higher risk class.
 
-CTEs (Common Table Expressions) and Subqueries
+**- Income Deciles Expose Risk Concentration:**
+The risk segmentation script (03_risk_segmentation.sql) proves that looking at raw income isn't enough. By grouping the portfolio into income deciles, the bank can identify exactly where the default rate spikes. This allows management to adjust interest rates (Risk-Based Pricing) proportionally for lower-decile, higher-risk groups.
 
-Advanced Conditional Logic (Multiple CASE WHEN statements)
-
-Null values Handling (COALESCE)
-
-Data Type Casting and mathematical aggregations (ROUND, SUM, COUNT)
+**- Operational Efficiency through Automation:**
+The resulting A-B-C-D classification system enables Automated Underwriting. "Class A" loans can be auto-approved, and "Class D" auto-rejected, allowing human credit analysts to focus their time exclusively on the manual review of "grey area" applications (Classes B and C).
